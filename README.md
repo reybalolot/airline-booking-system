@@ -1,26 +1,23 @@
 # Technical Specification Document
 ## 1. Title Page
----
 - **Project name**: Airline Booking System
 - **Version**: 1.0.0
 - **Date**: August 1, 2024
 - **Authors**: John Rey Balolot, Jan Ren De Las Alas,  Mel An Nicole Geronimo, Dan Leoncito
 
 ## 2. Table of Contents
----
-[[#3. Introduction]]
-[[#4. Overall Description]]
-[[#5. Visual Mockup Reference]]
-[[#6. Features]]
-[[#7. Functional Requirements]]
-[[#8. Non-Functional Requirements]]
-[[#9. Data Requirements]]
-[[#10. External Interface Requirements]]
-[[#11. Glossary]]
-[[#12. Appendices]]
+- [Introduction](https://github.com/reybalolot/airline-booking-system/edit/main/README.md#3-introduction)
+- [Overall Description](https://github.com/reybalolot/airline-booking-system/edit/main/README.md#4-overall-description)
+- [Visual Mockup Reference](https://github.com/reybalolot/airline-booking-system/edit/main/README.md#5-visual-mockup-reference)
+- [Features](https://github.com/reybalolot/airline-booking-system/edit/main/README.md#6-features)
+- [Functional Requirements](https://github.com/reybalolot/airline-booking-system/edit/main/README.md#7-functional-requirements)
+- [Non-Functional Requirements](https://github.com/reybalolot/airline-booking-system/edit/main/README.md#8-non-functional-requirements)
+- [Data Requirements](https://github.com/reybalolot/airline-booking-system/edit/main/README.md#9-data-requirements)
+- [External Interface Requirements](https://github.com/reybalolot/airline-booking-system/edit/main/README.md#10-external-interface-requirements)
+- [Glossary](https://github.com/reybalolot/airline-booking-system/edit/main/README.md#11-glossary)
+- [Appendices](https://github.com/reybalolot/airline-booking-system/edit/main/README.md#12-appendices)
 
 ## 3. Introduction
----
 ### **Purpose**
 To develop and design a user-friendly airline booking application that simplifies the flight booking process, allowing users to search for flights, complete bookings, process payments, and manage their flight details efficiently.
 ### **Scope**
@@ -31,9 +28,8 @@ To be added
 None
 
 ## 4. Overall Description
----
 ### **Product Perspective**
-A sophisticated airline booking app designed to streamline the flight reservation process. By focusing on efficiency and user experience, the app integrates real-time data and advanced algorithms to offer a seamless journey from searching for flights to finalizing bookings. Our aim is to simplify travel planning with a modern, intuitive interface and comprehensive features.
+A sophisticated airline booking app designed to streamline the flight reservation process. By focusing on efficiency and user experience, the app integrates real-time data and advanced algorithms to offer a seamless journey from searching for flights to finalizing bookings. We aim to simplify travel planning with a modern, intuitive interface and comprehensive features.
 
 ### **Product Functions**
 - Flight Search
@@ -52,7 +48,7 @@ A sophisticated airline booking app designed to streamline the flight reservatio
 	- Booking Confirmation Alerts: Sends immediate confirmation of bookings and reminders for upcoming flights.
 
 - User Account Management
-	- Profile Management:Allows users to create and manage profiles with personal details, travel preferences, and flight history.
+	- Profile Management: Allows users to create and manage profiles with personal details, travel preferences, and flight history.
 	- Booking History: Provides access to past and upcoming bookings with options to view, modify, or cancel reservations.
 
 - Customer Support
@@ -211,10 +207,8 @@ This document outlines the hardware and software specifications required for the
 	- Adherence to local and international laws regarding data privacy and consumer rights.
 
 ## 5. Visual Mockup Reference
----
 [FIGMA MOCK UP - AIRLINE BOOKING SYSTEM](https://www.figma.com/design/UCFyEpOdwPIYoiQ0Ho0pki/ABS---Prototype?node-id=0-1&t=lANP5982FRwRYA34-1)
 ## 6. Features
----
 ### Key Features
 1. **User Registration and Login**
 	- Allows users to create an account and log in; Integration with OAuth for social logins (e.g., Google, Facebook).
@@ -223,7 +217,7 @@ This document outlines the hardware and software specifications required for the
 	- Includes profile picture upload, password change, and contact information.
 3. **Flight Search**
 	- Allows users to search for flights based on criteria such as origin, destination, dates, and number of passengers.
-	- Advanced search filters for direct flights, layovers, airline preferences.
+	- Advanced search filters for direct flights, layovers, and airline preferences.
 4. **Flight Booking**
 	- Facilitates booking of flights.
 	- Selection of flight class (economy, business, first), meal preferences, and special assistance.
@@ -233,7 +227,7 @@ This document outlines the hardware and software specifications required for the
 6. **Booking Management**
 	- Allows users to view, modify, or cancel their bookings.
 	- Displays booking details, cancellation policies, and rescheduling options.
-7. *E-Tickets and Boarding Passes*
+7. **E-Tickets and Boarding Passes**
 	- Generates and emails e-tickets and boarding passes.
 	- QR code generation for mobile boarding passes
 8. **Flight Status Tracking**
@@ -308,187 +302,185 @@ This document outlines the hardware and software specifications required for the
 	- Government-issued alerts, health and safety warnings
 
 ## 7. Functional Requirements
----
 ### Use Cases
 
 1. User Registration
-*Description*:
-	- Allows a user-customers to register an account in the airline booking system using their email and password or through their Google account. The system will check the inputs and create the account if they are valid.
-*Actors*:
-	- Customer
-*Preconditions*:
-	- The user is on the registration page.
-	- The user has an active internet connection.
-*Postconditions*:
-	- A new user account is created and stored in the system.
-	- The user is logged in and redirected to their dashboard or the home page.
-*Main Flow*:
-	- The user navigates to the registration page.
-	- The user enters their email, password, and other necessary details.
-	- The user submits the form.
-	- The system validates the inputs.
-	- The system creates a new user account and stores the details in the database.
-	- The user receives a confirmation message.
-*Alternate Flows*:
-**Flow 1**: *Register Using Google Account*
-	- The user selects the Google login option.
-	- The system redirects the user to the Google authentication page.
-	- Upon successful authentication, the system creates a new user account linked to the Google account.
-**Flow 2**: *Invalid Input Provided*
-	- The system detects an invalid email or password.
-	- The system prompts the user to correct the input and retry the registration.
+Description:
+- Allows user-customers to register an account in the airline booking system using their email and password or through their Google account. The system will check the inputs and create the account if they are valid.
+Actors:
+- Customer
+Preconditions:
+- The user is on the registration page.
+- The user has an active internet connection.
+Postconditions:
+- A new user account is created and stored in the system.
+- The user is logged in and redirected to their dashboard or the home page.
+Main Flow:
+- The user navigates to the registration page.
+- The user enters their email, password, and other necessary details.
+- The user submits the form.
+- The system validates the inputs.
+- The system creates a new user account and stores the details in the database.
+- The user receives a confirmation message.
+Alternate Flows:
+Flow 1: Register Using Google Account
+- The user selects the Google login option.
+- The system redirects the user to the Google authentication page.
+- Upon successful authentication, the system creates a new user account linked to the Google account.
+Flow 2: Invalid Input Provided
+- The system detects an invalid email or password.
+- The system prompts the user to correct the input and retry the registration.
 
 2. Booking a Flight
-*Description*:
-	- Allows a user-customers to search for and book flights based on their travel preferences. Customers can enter their travel details, such as origin, destination, and travel dates, to find available flights.
-*Actors*:
-	- Customer
-	- System
-*Preconditions*:
-	- Customer is logged into the system.
-	- Flight to be booked is available.
-*Postconditions*:
-	- Flight booking is confirmed and a confirmation email is sent to the customer.
-*Main Flow*:
-	- Customer searches for available flights by entering travel details (origin, destination, dates).
-	- System displays a list of available flights.
-	- Customer selects a flight and enters passenger details.
-	- Customer reviews the booking details and proceeds to payment.
-	- System processes the payment and confirms the booking.
-	- System sends a confirmation email to the customer.
+Description:
+- Allows  user-customers to search for and book flights based on their travel preferences. Customers can enter their travel details, such as origin, destination, and travel dates, to find available flights.
+Actors:
+- Customer
+- System
+Preconditions:
+- Customer is logged into the system.
+- Flight to be booked is available.
+Postconditions:
+- Flight booking is confirmed and a confirmation email is sent to the customer.
+Main Flow:
+- Customer searches for available flights by entering travel details (origin, destination, dates).
+- System displays a list of available flights.
+- Customer selects a flight and enters passenger details.
+- Customer reviews the booking details and proceeds to payment.
+- System processes the payment and confirms the booking.
+- System sends a confirmation email to the customer.
 
 3. Cancel a Booking
-*Description*:
-	- Allows a user-customers to cancel their existing flight bookings. Customers can log into the system, navigate to their bookings, and select the booking they wish to cancel.
-*Actors*:
-	- Customer
-	- System
-*Preconditions*:
-	- Customer has an existing booking.
-*Postconditions*:
-	- Booking is canceled and a cancellation email is sent to the customer.
-*Main Flow*:
-	- Customer logs into the system and navigates to their bookings.
-	- Customer selects the booking to cancel.
-	- System prompts for confirmation of cancellation.
-	- Customer confirms the cancellation.
-	- System processes the cancellation and updates the booking status.
-	- System sends a cancellation email to the customer.
+Description:
+- Allows user-customers to cancel their existing flight bookings. Customers can log into the system, navigate their bookings, and select the booking they wish to cancel.
+Actors:
+- Customer
+- System
+Preconditions:
+- Customer has an existing booking.
+Postconditions:
+- Booking is canceled and a cancellation email is sent to the customer.
+Main Flow:
+- Customer logs into the system and navigates to their bookings.
+- Customer selects the booking to cancel.
+- System prompts for confirmation of cancellation.
+- Customer confirms the cancellation.
+- System processes the cancellation and updates the booking status.
+- System sends a cancellation email to the customer.
 
 4. Check Flight Status
-*Description*:
-	- Allows customers to check the current status of their flights. Customers can enter flight details, such as the flight number and date, to retrieve the latest information.
-*Actors*:
-	- Customer
-	- System
-*Preconditions*:
-	- None.
-*Postconditions*:
-	- Flight status is displayed to the customer.
-*Main Flow*:
-	- Customer enters flight details (flight number, date).
-	- System retrieves and displays the current status of the flight
+Description:
+- Allows customers to check the current status of their flights. Customers can enter flight details, such as the flight number and date, to retrieve the latest information.
+Actors:
+- Customer
+- System
+Preconditions:
+- None.
+Postconditions:
+- Flight status is displayed to the customer.
+Main Flow:
+- Customer enters flight details (flight number, date).
+- System retrieves and displays the current status of the flight
 
 ### System Features
-
 1. User Authentication
-**Description**:
-	- This feature allows users to register for a new account using their email and password, as well as log in to the system.
-**Priority**:
-	- High
-**Inputs**:
-	- Email
-	- Password
-**Processing**:
-	- Validate the email and password (e.g., check for proper format and strength).
-	- Create a new user account and store the information in the database.
-	- Log the user in upon successful registration.
-**Outputs**:
-	- If registration is successful, the user is logged in and redirected to the appropriate page.
-	- If login is successful, the user is redirected to their dashboard or home page.
-**Error Handling**:
-	- If the email is already associated with an existing account, show an error message indicating that the user must log in instead.
-	- If invalid input is provided (e.g., improperly formatted email or weak password), the system shows error messages guiding the user to correct the input.
+Description:
+- This feature allows users to register for a new account using their email and password, as well as log in to the system.
+Priority:
+- High
+Inputs:
+- Email
+- Password
+Processing:
+- Validate the email and password (e.g., check for proper format and strength).
+- Create a new user account and store the information in the database.
+- Log the user in upon successful registration.
+Outputs:
+- If registration is successful, the user is logged in and redirected to the appropriate page.
+- If login is successful, the user is redirected to their dashboard or home page.
+Error Handling:
+- If the email is already associated with an existing account, show an error message indicating that the user must log in instead.
+- If invalid input is provided (e.g., improperly formatted email or weak password), the system shows error messages guiding the user to correct the input.
 
 2. Flight Search
-**Description**:
-	- This feature allows users to search for available flights based on their travel preferences, such as origin, destination, and travel dates.
-**Priority**:
-	- High
-**Inputs**:
-	- Origin
-	- Destination
-	- Travel Dates
-	- Number of Passengers
-	- Class Preference (Economy, Business, etc.)
-**Processing**:
-	- Validate the input data (e.g., check for valid locations and dates).
-	- Query the database for available flights matching the search criteria.
-	- Sort and filter the results based on user preferences (e.g., price, duration).
-**Outputs**:
-	- Display a list of available flights with details such as airline, departure and arrival times, duration, and price.
-**Error Handling**:
-	- If no flights are found, show a message indicating no available flights for the selected criteria.
-	- If invalid input is provided (e.g., incorrect date format), show error messages guiding the user to correct the input.
+Description:
+- This feature allows users to search for available flights based on their travel preferences, such as origin, destination, and travel dates.
+Priority:
+- High
+Inputs:
+- Origin
+- Destination
+- Travel Dates
+- Number of Passengers
+- Class Preference (Economy, Business, etc.)
+Processing:
+- Validate the input data (e.g., check for valid locations and dates).
+- Query the database for available flights matching the search criteria.
+- Sort and filter the results based on user preferences (e.g., price, duration).
+Outputs:
+- Display a list of available flights with details such as airline, departure and arrival times, duration, and price.
+Error Handling:
+- If no flights are found, show a message indicating no available flights for the selected criteria.
+- If invalid input is provided (e.g., incorrect date format), show error messages guiding the user to correct the input.
 
 3. Booking Management
-**Description**:
-	- This feature allows users to book, view, and cancel their flight reservations.
-**Priority**:
-	- High
-**Inputs**:
-	- Selected Flight
-	- Passenger Details (Name, Age, etc.)
-	- Payment Information
-**Processing**:
-	- Validate the passenger details and payment information.
-	- Reserve the selected flight and create a booking record in the database.
-	- Process the payment and confirm the booking.
-**Outputs**:
-	- If booking is successful, display a confirmation message and booking details.
-	- If viewing bookings, display a list of the user’s current and past bookings.
-	- If canceling a booking, update the booking status and display a cancellation confirmation.
-**Error Handling**:
-	- If the selected flight is no longer available, show an error message and prompt the user to select another flight.
-	- If invalid input is provided (e.g., incorrect payment information), show error messages guiding the user to correct the input.
+Description
+- This feature allows users to book, view, and cancel their flight reservations.
+Priority:
+- High
+Inputs:
+- Selected Flight
+- Passenger Details (Name, Age, etc.)
+- Payment Information
+Processing:
+- Validate the passenger details and payment information.
+- Reserve the selected flight and create a booking record in the database.
+- Process the payment and confirm the booking.
+Outputs:
+- If the booking is successful, display a confirmation message and booking details.
+- If viewing bookings, display a list of the user’s current and past bookings.
+- If canceling a booking, update the booking status and display a cancellation confirmation.
+Error Handling:
+- If the selected flight is no longer available, show an error message and prompt the user to select another flight.
+- If invalid input is provided (e.g., incorrect payment information), show error messages guiding the user to correct the input.
 
 4. Payment Processing
-**Description**:
-	- This feature securely processes payments for flight bookings.
-**Priority**:
-	- High
-**Inputs**:
-	- Payment Information (Credit Card Number, Expiry Date, CVV, etc.)
-	- Booking Amount
-**Processing**:
-	- Validate the payment information.
-	- Process the payment through a secure payment gateway.
-	- Update the booking status to confirmed upon successful payment.
-**Outputs**:
-	- If payment is successful, display a payment confirmation message and update the booking status.
-	- If payment fails, display an error message and prompt the user to retry or use a different payment method.
-**Error Handling**:
-	- If the payment gateway is unavailable, show an error message and prompt the user to try again later.
-	- If invalid payment information is provided, show error messages guiding the user to correct the input.
+Description:
+- This feature securely processes payments for flight bookings.
+Priority:
+- High
+Inputs:
+- Payment Information (Credit Card Number, Expiry Date, CVV, etc.)
+- Booking Amount
+Processing:
+- Validate the payment information.
+- Process the payment through a secure payment gateway.
+- Update the booking status to confirmed upon successful payment.
+Outputs:
+- If payment is successful, display a payment confirmation message and update the booking status.
+- If payment fails, display an error message and prompt the user to retry or use a different payment method.
+Error Handling:
+- If the payment gateway is unavailable, show an error message and prompt the user to try again later.
+- If invalid payment information is provided, show error messages guiding the user to correct the input.
 
 5. Notification System
-**Description**:
-	- This feature sends email notifications for booking confirmations, cancellations, and other relevant updates.
-**Priority**:
-	- Medium
-**Inputs**:
-	- User Email
-	- Notification Type (Booking Confirmation, Cancellation, etc.)
-	- Relevant Booking Details
-**Processing**:
-	- Generate the appropriate email content based on the notification type and booking details.
-	- Send the email to the user’s registered email address.
-**Outputs**:
-	- If the email is sent successfully, log the notification in the system.
-	- If the email fails to send, log the error and retry sending.
-**Error Handling**:
-	- If the email server is unavailable, queue the email for later delivery and notify the user of the delay.
-	- If the user’s email address is invalid, show an error message and prompt the user to update their email address.
+Description:
+- This feature sends email notifications for booking confirmations, cancellations, and other relevant updates.
+Priority:
+- Medium
+Inputs:
+- User Email
+- Notification Type (Booking Confirmation, Cancellation, etc.)
+- Relevant Booking Details
+Processing:
+- Generate the appropriate email content based on the notification type and booking details.
+- Send the email to the user’s registered email address.
+Outputs:
+- If the email is sent successfully, log the notification in the system.
+- If the email fails to send, log the error and retry sending.
+Error Handling:
+- If the email server is unavailable, queue the email for later delivery and notify the user of the delay.
+- If the user’s email address is invalid, show an error message and prompt the user to update their email address.
 
 ## 8. Non-Functional Requirements
 ---
@@ -510,7 +502,7 @@ This document outlines the hardware and software specifications required for the
 **Usability**
 - User Interface (UI): The website should be easy to navigate, with a clean and intuitive design that guides users through the booking process.
 - Accessibility: The website should comply with accessibility standards (e.g., WCAG 2.1) to ensure it is usable by people with disabilities.
-- Responsiveness: The webiste should be responsive and function well on various devices, including desktops, tablets, and smartphones.
+- Responsiveness: The website should be responsive and function well on various devices, including desktops, tablets, and smartphones.
 - Localization: The website should support multiple languages and currencies, based on the user’s location.
 **Maintainability**
 - Code Quality: The codebase should be modular and follow best practices to make it easy to update and extend.
@@ -529,7 +521,6 @@ This document outlines the hardware and software specifications required for the
 - Energy Efficiency: The website should be designed to minimize energy consumption, particularly in terms of server usage and data transfer.
 
 ## 9. Data Requirements
----
 **Data Models**
 - User Model:
 		userId: String (unique, primary key)
@@ -623,7 +614,6 @@ The schemas will be flexible to accommodate the frequent updates and changes in 
 	- A MongoDB schema validation rules will also be defined to ensure data consistency.
 
 ## 10. External Interface Requirements
----
 The external interface requirements of the Airline Booking System encompass all the interactions between the system and its external entities, such as users, third-party services, and hardware systems. These interfaces ensure the system operates smoothly, integrates with other platforms, and provides a seamless user experience.
 **User Interface (UI)**
 - Web Interface
@@ -728,7 +718,6 @@ The external interface requirements of the Airline Booking System encompass all 
 	- Logging of integration failures and automated alerts to the technical team for prompt resolution.
 
 ## 11. Glossary
----
 - ACID: Atomicity, Consistency, Isolation, Durability
 - API: Application Programming Interface
 - CDN: Content Delivery Network
@@ -746,11 +735,8 @@ The external interface requirements of the Airline Booking System encompass all 
 - WCAG: Web Content Accessibility Guidelines
 
 ## 12. Appendices
----
-***Data Model Diagram**
-![ABS-Data Models](Airline-Booking-System.jpg)
+![Data Model Diagram](Airline-Booking-System.jpg)
 
-**Supporting Information**
 [User Flow Diagrams](https://www.figma.com/design/K5s0BgWm1qoAaVjv9xp8Yr/ABS---User-Flow-Diagram?node-id=0-1&t=YFAaCLQRnu3ckhbk-1)
 
 [Wireframe](https://www.figma.com/design/6fH7QakAXQUply0SCo5bD9/ABS---Wireframe?node-id=0-1&t=xJdR2MPPjhDWQQlg-1)
