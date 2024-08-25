@@ -9,7 +9,7 @@
 - [Introduction](https://github.com/reybalolot/airline-booking-system?tab=readme-ov-file#3-introduction)
 - [Overall Description](https://github.com/reybalolot/airline-booking-system?tab=readme-ov-file#4-overall-description)
 - [Visual Mockup Reference](https://github.com/reybalolot/airline-booking-system?tab=readme-ov-file#5-visual-mockup-reference)
-- [Features](https://github.com/reybalolot/airline-booking-system?tab=readme-ov-file#3-introduction)
+- [Features](https://github.com/reybalolot/airline-booking-system?tab=readme-ov-file#-features)
 - [Functional Requirements](https://github.com/reybalolot/airline-booking-system?tab=readme-ov-file#7-functional-requirements)
 - [Non-Functional Requirements](https://github.com/reybalolot/airline-booking-system?tab=readme-ov-file#8-non-functional-requirements)
 - [Data Requirements](https://github.com/reybalolot/airline-booking-system?tab=readme-ov-file#9-data-requirements)
