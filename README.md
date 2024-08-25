@@ -6,16 +6,16 @@
 - **Authors**: John Rey Balolot, Jan Ren De Las Alas,  Mel An Nicole Geronimo, Dan Leoncito
 
 ## 2. Table of Contents
-- [Introduction](https://github.com/reybalolot/airline-booking-system/edit/main/README.md#3-introduction)
-- [Overall Description](https://github.com/reybalolot/airline-booking-system/edit/main/README.md#4-overall-description)
-- [Visual Mockup Reference](https://github.com/reybalolot/airline-booking-system/edit/main/README.md#5-visual-mockup-reference)
-- [Features](https://github.com/reybalolot/airline-booking-system/edit/main/README.md#6-features)
-- [Functional Requirements](https://github.com/reybalolot/airline-booking-system/edit/main/README.md#7-functional-requirements)
-- [Non-Functional Requirements](https://github.com/reybalolot/airline-booking-system/edit/main/README.md#8-non-functional-requirements)
-- [Data Requirements](https://github.com/reybalolot/airline-booking-system/edit/main/README.md#9-data-requirements)
-- [External Interface Requirements](https://github.com/reybalolot/airline-booking-system/edit/main/README.md#10-external-interface-requirements)
-- [Glossary](https://github.com/reybalolot/airline-booking-system/edit/main/README.md#11-glossary)
-- [Appendices](https://github.com/reybalolot/airline-booking-system/edit/main/README.md#12-appendices)
+- [Introduction](https://github.com/reybalolot/airline-booking-system?tab=readme-ov-file#3-introduction)
+- [Overall Description](https://github.com/reybalolot/airline-booking-system?tab=readme-ov-file#4-overall-description)
+- [Visual Mockup Reference](https://github.com/reybalolot/airline-booking-system?tab=readme-ov-file#5-visual-mockup-reference)
+- [Features](https://github.com/reybalolot/airline-booking-system?tab=readme-ov-file#3-introduction)
+- [Functional Requirements](https://github.com/reybalolot/airline-booking-system?tab=readme-ov-file#7-functional-requirements)
+- [Non-Functional Requirements](https://github.com/reybalolot/airline-booking-system?tab=readme-ov-file#8-non-functional-requirements)
+- [Data Requirements](https://github.com/reybalolot/airline-booking-system?tab=readme-ov-file#9-data-requirements)
+- [External Interface Requirements](https://github.com/reybalolot/airline-booking-system?tab=readme-ov-file#10-external-interface-requirements)
+- [Glossary](https://github.com/reybalolot/airline-booking-system?tab=readme-ov-file#11-glossary)
+- [Appendices](https://github.com/reybalolot/airline-booking-system?tab=readme-ov-file#12-appendices)
 
 ## 3. Introduction
 ### **Purpose**
