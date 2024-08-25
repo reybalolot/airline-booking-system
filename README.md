@@ -3,7 +3,7 @@
 - **Project name**: Airline Booking System
 - **Version**: 1.0.0
 - **Date**: August 1, 2024
-- **Authors**: John Rey Balolot, Jan Ren De Las Alas,  Mel An Nicole Geronimo, Dan Leoncito
+- **Authors**: John Rey Balolot, Jan Ren De Las Alas,  Mel An Nicole Geronimo, Dan Leoncito, Janine Prieto
 
 ## 2. Table of Contents
 - [Introduction](https://github.com/reybalolot/airline-booking-system?tab=readme-ov-file#3-introduction)
@@ -307,14 +307,18 @@ This document outlines the hardware and software specifications required for the
 1. User Registration
 Description:
 - Allows user-customers to register an account in the airline booking system using their email and password or through their Google account. The system will check the inputs and create the account if they are valid.
+
 Actors:
 - Customer
+
 Preconditions:
 - The user is on the registration page.
 - The user has an active internet connection.
+
 Postconditions:
 - A new user account is created and stored in the system.
 - The user is logged in and redirected to their dashboard or the home page.
+
 Main Flow:
 - The user navigates to the registration page.
 - The user enters their email, password, and other necessary details.
@@ -322,11 +326,14 @@ Main Flow:
 - The system validates the inputs.
 - The system creates a new user account and stores the details in the database.
 - The user receives a confirmation message.
+
 Alternate Flows:
+
 Flow 1: Register Using Google Account
 - The user selects the Google login option.
 - The system redirects the user to the Google authentication page.
 - Upon successful authentication, the system creates a new user account linked to the Google account.
+
 Flow 2: Invalid Input Provided
 - The system detects an invalid email or password.
 - The system prompts the user to correct the input and retry the registration.
@@ -334,14 +341,18 @@ Flow 2: Invalid Input Provided
 2. Booking a Flight
 Description:
 - Allows  user-customers to search for and book flights based on their travel preferences. Customers can enter their travel details, such as origin, destination, and travel dates, to find available flights.
+
 Actors:
 - Customer
 - System
+
 Preconditions:
 - Customer is logged into the system.
 - Flight to be booked is available.
+
 Postconditions:
 - Flight booking is confirmed and a confirmation email is sent to the customer.
+
 Main Flow:
 - Customer searches for available flights by entering travel details (origin, destination, dates).
 - System displays a list of available flights.
@@ -353,13 +364,17 @@ Main Flow:
 3. Cancel a Booking
 Description:
 - Allows user-customers to cancel their existing flight bookings. Customers can log into the system, navigate their bookings, and select the booking they wish to cancel.
+
 Actors:
 - Customer
 - System
+
 Preconditions:
 - Customer has an existing booking.
+
 Postconditions:
 - Booking is canceled and a cancellation email is sent to the customer.
+
 Main Flow:
 - Customer logs into the system and navigates to their bookings.
 - Customer selects the booking to cancel.
@@ -371,13 +386,17 @@ Main Flow:
 4. Check Flight Status
 Description:
 - Allows customers to check the current status of their flights. Customers can enter flight details, such as the flight number and date, to retrieve the latest information.
+
 Actors:
 - Customer
 - System
+
 Preconditions:
 - None.
+
 Postconditions:
 - Flight status is displayed to the customer.
+
 Main Flow:
 - Customer enters flight details (flight number, date).
 - System retrieves and displays the current status of the flight
@@ -386,18 +405,23 @@ Main Flow:
 1. User Authentication
 Description:
 - This feature allows users to register for a new account using their email and password, as well as log in to the system.
+
 Priority:
 - High
+
 Inputs:
 - Email
 - Password
+
 Processing:
 - Validate the email and password (e.g., check for proper format and strength).
 - Create a new user account and store the information in the database.
 - Log the user in upon successful registration.
+
 Outputs:
 - If registration is successful, the user is logged in and redirected to the appropriate page.
 - If login is successful, the user is redirected to their dashboard or home page.
+
 Error Handling:
 - If the email is already associated with an existing account, show an error message indicating that the user must log in instead.
 - If invalid input is provided (e.g., improperly formatted email or weak password), the system shows error messages guiding the user to correct the input.
@@ -405,20 +429,25 @@ Error Handling:
 2. Flight Search
 Description:
 - This feature allows users to search for available flights based on their travel preferences, such as origin, destination, and travel dates.
+
 Priority:
 - High
+
 Inputs:
 - Origin
 - Destination
 - Travel Dates
 - Number of Passengers
 - Class Preference (Economy, Business, etc.)
+
 Processing:
 - Validate the input data (e.g., check for valid locations and dates).
 - Query the database for available flights matching the search criteria.
 - Sort and filter the results based on user preferences (e.g., price, duration).
+
 Outputs:
 - Display a list of available flights with details such as airline, departure and arrival times, duration, and price.
+
 Error Handling:
 - If no flights are found, show a message indicating no available flights for the selected criteria.
 - If invalid input is provided (e.g., incorrect date format), show error messages guiding the user to correct the input.
@@ -426,20 +455,25 @@ Error Handling:
 3. Booking Management
 Description
 - This feature allows users to book, view, and cancel their flight reservations.
+
 Priority:
 - High
+
 Inputs:
 - Selected Flight
 - Passenger Details (Name, Age, etc.)
 - Payment Information
+
 Processing:
 - Validate the passenger details and payment information.
 - Reserve the selected flight and create a booking record in the database.
 - Process the payment and confirm the booking.
+
 Outputs:
 - If the booking is successful, display a confirmation message and booking details.
 - If viewing bookings, display a list of the user’s current and past bookings.
 - If canceling a booking, update the booking status and display a cancellation confirmation.
+
 Error Handling:
 - If the selected flight is no longer available, show an error message and prompt the user to select another flight.
 - If invalid input is provided (e.g., incorrect payment information), show error messages guiding the user to correct the input.
@@ -447,18 +481,23 @@ Error Handling:
 4. Payment Processing
 Description:
 - This feature securely processes payments for flight bookings.
+
 Priority:
 - High
+
 Inputs:
 - Payment Information (Credit Card Number, Expiry Date, CVV, etc.)
 - Booking Amount
+
 Processing:
 - Validate the payment information.
 - Process the payment through a secure payment gateway.
 - Update the booking status to confirmed upon successful payment.
+
 Outputs:
 - If payment is successful, display a payment confirmation message and update the booking status.
 - If payment fails, display an error message and prompt the user to retry or use a different payment method.
+
 Error Handling:
 - If the payment gateway is unavailable, show an error message and prompt the user to try again later.
 - If invalid payment information is provided, show error messages guiding the user to correct the input.
@@ -466,115 +505,129 @@ Error Handling:
 5. Notification System
 Description:
 - This feature sends email notifications for booking confirmations, cancellations, and other relevant updates.
+
 Priority:
 - Medium
+
 Inputs:
 - User Email
 - Notification Type (Booking Confirmation, Cancellation, etc.)
 - Relevant Booking Details
+
 Processing:
 - Generate the appropriate email content based on the notification type and booking details.
 - Send the email to the user’s registered email address.
+
 Outputs:
 - If the email is sent successfully, log the notification in the system.
 - If the email fails to send, log the error and retry sending.
+
 Error Handling:
 - If the email server is unavailable, queue the email for later delivery and notify the user of the delay.
 - If the user’s email address is invalid, show an error message and prompt the user to update their email address.
 
 ## 8. Non-Functional Requirements
----
 **Performance**
 - Response Time: The website should load pages and respond to user actions within 2-3 seconds under normal conditions.
 - Scalability: The website must handle an increasing number of users and transactions, especially during peak times (e.g., holidays).
 - Throughput: The system should support a minimum of X transactions per second (where X is a specified number based on expected traffic).
-- Latency: Payment processing should complete within 5 seconds.
+- Latency: Payment processing should be completed within 5 seconds.
+
 **Reliability**
 - Availability: The website should have an uptime of 99.9% or higher, with minimal downtime for maintenance.
 - Fault Tolerance: The system should continue to function correctly even when certain components fail, with automatic failover to backup systems.
 - Recovery Time: In the event of a system failure, the website should be restored to operational status within 30 minutes.
+
 **Security**
 - Data Protection: All sensitive data, including payment and personal information, must be encrypted both in transit (using SSL/TLS) and at rest.
 - Authentication: Users should be authenticated via secure methods such as multi-factor authentication (MFA).
 - Authorization: Access to different parts of the website should be role-based, ensuring users can only perform actions they are permitted to.
 - Audit Logging: All user actions, especially those related to payments and booking changes, should be logged for audit purposes.
 - Compliance: The website must comply with relevant regulations, such as GDPR for data protection and PCI-DSS for payment processing.
+
 **Usability**
 - User Interface (UI): The website should be easy to navigate, with a clean and intuitive design that guides users through the booking process.
 - Accessibility: The website should comply with accessibility standards (e.g., WCAG 2.1) to ensure it is usable by people with disabilities.
 - Responsiveness: The website should be responsive and function well on various devices, including desktops, tablets, and smartphones.
 - Localization: The website should support multiple languages and currencies, based on the user’s location.
+
 **Maintainability**
 - Code Quality: The codebase should be modular and follow best practices to make it easy to update and extend.
 - Documentation: There should be comprehensive documentation for developers, including API documentation, code comments, and architecture diagrams.
 - Testing: The website should have automated tests covering critical functionality, and new code should be continuously integrated and tested.
+
 **Portability**
 - Platform Independence: The website should be deployable on various operating systems (e.g., Windows, Linux, macOS) and cloud environments.
 - Browser Compatibility: The website should work seamlessly across major web browsers (e.g., Chrome, Firefox, Safari, Edge).
+
 **Interoperability**
 - API Integration: The website should be able to integrate with external systems (e.g., airline reservation systems, payment gateways) via well-defined APIs.
 - Data Exchange: The website should support standard data formats (e.g., JSON, XML) for communication with external systems.
+
 **Legal and Compliance**
 - Data Retention: The website should adhere to legal requirements for data retention, ensuring that records are kept for the necessary period.
 - Legal Disclaimers: The website should include appropriate legal disclaimers and terms of service agreements that users must accept.
+
 **Sustainability**
 - Energy Efficiency: The website should be designed to minimize energy consumption, particularly in terms of server usage and data transfer.
 
 ## 9. Data Requirements
 **Data Models**
 - User Model:
-		userId: String (unique, primary key)
-		firstName: String
-		lastName: String
-		dateOfBirth: String
-		email: String (unique)
-		password: String (hashed)
-		mobileNumber: String ()
-		bookingHistory: Array (referencing to bookingId in Booking Model)
-		role: String (admin or customer etc.)
-		createdAt: Date
-		updatedAt: Date
+	- `userId`: String (unique, primary key)
+	- `firstName`: String
+	- `lastName`: String
+	- `dateOfBirth`: String
+	- `email`: String (unique)
+	- `password`: String (hashed)
+	- `mobileNumber`: String ()
+	- `bookingHistory`: Array (referencing to bookingId in Booking Model)
+	- `role`: String (admin or customer etc.)
+	- `createdAt`: Date
+	- `updatedAt`: Date
 - Passenger Model:
-		passengerId: String (unique, primary key)
-		userId: String (referencing to userId in User Model)
-		firstName: String
-		lastName: String
-		age: Number
-		otherDetails: String
+	- `passengerId`: String (unique, primary key)
+	- `userId`: String (referencing to userId in User Model)
+	- `firstName`: String
+	- `lastName`: String
+	- `age`: Number
+	- `otherDetails`: String
 - Booking Model:
-		bookingId: String (unique, primary key)
-		userId: String (referencing to userId in User Model)
-		flightId: String (referencing to flightId in Flight Model)
-		passengers: Array (referencing to passengerId Passenger Model)
-		bookingDate: Date
-		seatNumber: Array
-		status: String
-		totalAmount: Number
-		createdAt: Date
-		updatedAt: Date
+	- `bookingId`: String (unique, primary key)
+	- `userId`: String (referencing to userId in User Model)
+	- `flightId`: String (referencing to flightId in Flight Model)
+	- `passengers`: Array (referencing to passengerId Passenger Model)
+	- `bookingDate`: Date
+	- `seatNumber`: Array
+	- `status`: String
+	- `totalAmount`: Number
+	- `createdAt`: Date
+	- `updatedAt`: Date
 - Flight Model:
-		flightId: String (unique, primary key)
-		flightNumber: String
-		origin: String
-		destination: String
-		departureTime: Date
-		arrivalTimr: Date
-		price: Number
-		seatsAvailable: Number
-		createdAt: Date
-		updatedAt: Date
+	- `flightId`: String (unique, primary key)
+	- `flightNumber`: String
+	- `origin`: String
+	- `destination`: String
+	- `departureTime`: Date
+	- `arrivalTimr`: Date
+	- `price`: Number
+	- `seatsAvailable`: Number
+	- `createdAt`: Date
+	- `updatedAt`: Date
 - Payment Model:
-		paymentId: String (unique, primary key)
-		bookingId: String (referencing to bookingId in Booking Model)
-		amount: Number
-		paymentDate: Date
-		paymentMethod: String
-		status: String
-		createdAt: Date
-		updatedAt: Date
+	- `paymentId`: String (unique, primary key)
+	- `bookingId`: String (referencing to bookingId in Booking Model)
+	- `amount`: Number
+	- `paymentDate`: Date
+	- `paymentMethod`: String
+	- `status`: String
+	- `createdAt`: Date
+	- `updatedAt`: Date
 
 **Database Requirements**
+
 The system will use NoSQL database type MongoDB for its database along with the MongoDB Altas for cloud hosting needs. Due to its flexibility in handling complex and nested data structures, which is ideal for managing dynamic flight and booking information.
+
 The schemas will be flexible to accommodate the frequent updates and changes in the mentioned models above. The following collections will be created following each data model:
 - users
 - flights
@@ -615,6 +668,7 @@ The schemas will be flexible to accommodate the frequent updates and changes in 
 
 ## 10. External Interface Requirements
 The external interface requirements of the Airline Booking System encompass all the interactions between the system and its external entities, such as users, third-party services, and hardware systems. These interfaces ensure the system operates smoothly, integrates with other platforms, and provides a seamless user experience.
+
 **User Interface (UI)**
 - Web Interface
 	Description:
