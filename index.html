@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap CSS link -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+
+  <!-- CSS link -->
+  <link rel="stylesheet" href="./styles/index.css">
+  <title>NobelSky Express</title>
+</head>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg px-sm-5 px-3 fixed-top navbar-dark" id="navbar">
+  <img src="./images/noblesky-logo.png" class="logo d-none d-md-block mx-3" alt="noblesky-logo">
+  <a class="navbar-brand fw-bold text-white" href="./index.html">NobleSky Express</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarnav" aria-controls="navbarnav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarnav">
+    <ul class="navbar-nav ms-sm-auto fw-normal">
+      <li class="nav-item mx-3">
+        <a class="nav-link text-white" href="./index.html">Home</a>
+      </li>
+      <li class="nav-item mx-3">
+        <a class="nav-link text-white" href="./pages/about.html">About</a>
+      </li>
+      <li class="nav-item mx-3">
+        <a class="nav-link text-white" href="./pages/login.html">Manage</a>
+      </li>
+      <li class="nav-item mx-3">
+        <a class="nav-link text-white" href="./pages/login.html"><i class="fa-solid fa-user px-2"></i>Log in</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!-- Image Carousel -->
+<main>
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./images/japan.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption">
+          <h1>Soaring with Grace, Arriving in Style</h1>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./images/venice.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption">
+          <h1>Travel Beyond Horizons</h1>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./images/India.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption">
+          <h1>Explore the World with Us</h1>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</main>
+
+<!-- Image Carousel ends here -->
+
+
+<div class="flight-search">
+
+
+  <!-- Search Form -->
+
+
+  <div class="dropdown d-flex">
+    <img src="./images/plane.png" alt="plane" width="45px">
+    <button class="btn btn-secondary dropdown-toggle text-center" id="dropdownMenuButton" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <span class="fw-bold" id="tripType">One way</span>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="roundTripBtn">
+      <li><a class="dropdown-item fw-bold" href="#" id="toggleOption">Round trip</a></li>
+    </ul>
+  </div>
+
+
+  <form class="form-group d-flex">
+
+    <!-- From and To -->
+    <div class="col-12" id="fromAndTo">
+      <div class="p-3 bg-light rounded d-flex flex-column flex-md-row shadow-lg">
+        <div class="w-100 w-md-50 me-0 me-md-3 mb-3 mb-md-0">
+          <label for="from" class="form-label">From</label>
+          <input type="text" class="form-control" id="from" placeholder="Enter departure city">
+        </div>
+
+        <div class="col-auto align-self-center d-none d-md-block">
+          <img src="./images/arrow.png" alt="" id="arrow">
+        </div>
+
+        <div class="w-100 w-md-50">
+          <label for="to" class="form-label">To</label>
+          <input type="text" class="form-control" id="to" placeholder="Enter destination">
+        </div>
+      </div>
+    </div>
+
+    <!-- Depart and Return-->
+    <div class="col-12" id="departAndreturn">
+      <div class="departure p-3 bg-light rounded d-flex flex-column flex-md-row  shadow-lg">
+        <div class="w-100 w-md-50 me-0 me-md-3 mb-3 mb-md-0">
+          <label for="depart" class="form-label">Depart</label>
+          <input type="date" class="form-control" id="depart">
+        </div>
+        <div class="w-100 w-md-50">
+          <label for="return" class="form-label">Return</label>
+          <input type="date" class="form-control" id="return">
+        </div>
+      </div>
+    </div>
+
+    <!-- Search Button-->
+    <div class="col-2" id="searchBtn">
+      <a href="./pages/flight-search.html">
+        <button type="button" class="btn fw-bolder w-100" id="searchBtn1">Search flight</button>
+      </a>
+    </div>
+  </div>
+</form>
+</div>
+
+
+
+<!-- SPACE section -->
+<div class="space pt-5"></div>
+<div class="colorBG">
+  <div class="d-flex" id="Banner">
+    <div class="row">
+      <!-- Quote Section -->
+      <div class="col-12 col-md-6 text-center fw-bolder" id="spanQuote">
+        <span id="quote">
+          "Experience the skies like never before with NobleSky Express - where luxury meets convenience. From the moment you step on board, enjoy unparalleled comfort, exceptional service, and a journey that elevates your travel experience to new heights. Fly with us and discover why every trip with NobleSky Express is a first-class adventure!”
+        </span>
+      </div>
+      <!-- Image Section -->
+      <div class="col-12 col-md-6" id="steward">
+        <img src="./images/steward.png" alt="steward" id="steward1" class="img-fluid">
+      </div>
+    </div>
+  </div>
+
+
+  <!-- News Section -->
+  <section class="news-section py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">Latest News</h2>
+      <div class="row">
+        <!-- News Card 1 -->
+        <div class="col-md-6 mb-4">
+          <a href="./pages/blog.html">
+            <div class="card news-card">
+              <div class="card-image-wrapper">
+                <img src="./images/china.JPG" class="card-img-top" alt="China">
+                <div class="news-overlay">
+
+                  <p class="news-title">Discover the beauty of China</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-subtitle">Embark your Journey to China</h5>
+                <p class="card-text">“Discover the timeless beauty and modern marvels of China. Fly with us and experience a journey like no other.”</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- News Card 2 -->
+        <div class="col-md-6 mb-4">
+          <a href="./pages/blog.html">
+
+            <div class="card news-card">
+              <div class="card-image-wrapper">
+                <img src="./images/france.jpg" class="card-img-top" alt="France">
+                <div class="news-overlay">
+                  <p class="news-title">Bienvenue en France</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-subtitle">Experience elegance of France</h5>
+                <p class="card-text">“France: A symphony of art, culture, and romance. Discover the elegance and charm that captivate the world.”</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="text-white d-flex px-md-5 px-3 p-4">
+    <div class="col-md-5 col-12">
+      <p class="fw-bold fs-5">Contact Us</p>
+      <p>We'd  love to hear from you! Whether you have a question, need assistance, or want to share your travel experiences, feel free to reach out to us:</p>
+      <ul>
+        <li>Email: support@nobleskyexpress.com</li>
+        <li>Phone: +639-497-1233-456</li>
+        <li>Address: 123 Travel Ave., Quezon City, Philippines</li>
+        <li>Social Media: Follow us on Facebook, Twitter, and Instagram for the latest updates and travel tips.</li>
+      </ul>
+    </div>
+  </footer>
+  <!-- FOOTER -->
+  <!-- Bootstrap JS link -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/f77fb5b473.js" crossorigin="anonymous"></script>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const tripTypeSpan = document.getElementById('tripType');
+      const toggleOption = document.getElementById('toggleOption');
+
+      toggleOption.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        if (tripTypeSpan.textContent === 'One way') {
+          tripTypeSpan.textContent = 'Round trip';
+          toggleOption.textContent = 'One way';
+
+          // Adjust padding for "Round trip"
+          dropdownButton.style.padding = '2em'; // Increase padding
+
+        } else {
+          tripTypeSpan.textContent = 'One way';
+          toggleOption.textContent = 'Round trip';
+
+          dropdownButton.style.padding = '2em'; // Decrease padding
+        }
+      });
+    });
+
+  </script>
+</body>
+</html>

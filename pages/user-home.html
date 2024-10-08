@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title >NobleSky | Blog</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="../styles/user-page.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg px-sm-5 px-3 fixed-top" id="navbar">
+    <img src="../images/noblesky-logo.png" class="logo d-none d-md-block mx-3" alt="noblesky-logo">
+    <a class="navbar-brand fw-bold text-white" href="../index.html">NobleSky Express</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarnav" aria-controls="navbarnav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarnav">
+      <ul class="navbar-nav ms-sm-auto fw-normal">
+        <li class="nav-item mx-3">
+          <a class="nav-link text-white" href="../index.html">Home</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a class="nav-link text-white" href="./about.html">About</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a class="nav-link text-white" href="./user-home.html">Manage</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a class="nav-link text-white" href="../index.html"><i class="fa-solid fa-user px-2"></i>Log out</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- NAVBAR END -->
+  <!-- Image section 1 -->
+
+  <!-- <div id="section1">
+    <div class="text-center">
+      <h2 class="text-light fx-bolder pt-5 pb-5">Soaring with Grace, Arriving in Style</h2>
+    </div>
+  </div> -->
+  <main>
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel"></div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="../images/japan.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption">
+          <h1>Soaring with Grace, Arriving in Style</h1>
+        </div>
+        <div class="carousel-item">
+          <img src="../images/venice.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption">
+            <h1>Travel Beyond Horizons</h1>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../images/India.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption">
+          <h1>Explore the World with Us</h1>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  </main>
+
+  <!-- Flights Booked -->
+  <div class="justify-content-center my-4 ">
+    <div>
+      <h2 class="text-center mb-4" id="flightBooked" >Flights Booked</h2>
+      <!-- card 1 -->
+      <div id="FlightCard" class="shadow mx-sm-5 mx-2 mb-2 p-4 d-flex flex-column flex-lg-row  align-items-center justify-content-between">
+        <div>
+          <p class="h5">Tue, Aug 27, 2033</p>
+          <div class="d-flex align-items-center ">
+            <div class="text-center mx-3">
+              <p class="mb-0">7:45 pm</p>
+              <small class="text-muted">MNL</small>
+              <img src="../images/Airplane Take Off.png">
+            </div>
+            <div class="d-flex align-items-center">
+              <img class="d-none d-sm-block" src="../images/Line 2.png" alt="Line 2"/>
+              <small class="text-danger d-none d-sm-block">1h 5m</small>
+              <img  src="../images/Line 1.png" alt="Line 1"/>
+            </div>
+            <div class="text-center mx-3">
+              <p class="mb-0">7:50 pm</p>
+              <small class="tex t-muted">TKY</small>
+              <img src="../images/Airplane Landing.png">
+            </div>
+          </div>
+        </div>
+        <div class="d-flex align-items-center justify-content-center">
+          <img class="pt-3" src="../images/Airport.png">
+          <p class="my-3 pt-sm-3">jrd009</p>
+        </div>
+        <div class="d-flex align-items-center">
+          <p class="fw-bold m-4 pt-3">2 Adult</p>
+        </div>
+        <div class="d-flex align-items-center pt-sm-3">
+          <a href="./booked-flights.html">
+            <button id="detailsbtn" class="btn btn-primary">Details</button>
+          </a>
+        </div>
+      </div>
+      <!-- card 2 -->
+      <div id="FlightCard" class="shadow mx-sm-5 mx-2 mb-2 p-4 d-flex flex-column flex-lg-row  align-items-center justify-content-between">
+        <div>
+          <p class="h5">Tue, Aug 31, 2033</p>
+          <div class="d-flex align-items-center">
+            <div class="text-center mx-3">
+              <p class="mb-0">7:45 pm</p>
+              <small class="text-muted">TKY</small>
+              <img src="../images/Airplane Take Off.png">
+            </div>
+            <div class="d-flex align-items-center">
+              <img class="d-none d-sm-block" src="../images/Line 2.png" alt="Line 2"/>
+              <small class="text-danger d-none d-sm-block">1h 5m</small>
+              <img  src="../images/Line 1.png" alt="Line 1"/>
+            </div>
+            <div class="text-center mx-3">
+              <p class="mb-0">7:50 pm</p>
+              <small class="tex t-muted">MNL</small>
+              <img src="../images/Airplane Landing.png">
+            </div>
+          </div>
+        </div>
+        <div class="d-flex align-items-center justify-content-center">
+          <img class="pt-3" src="../images/Airport.png">
+          <p class="my-3 pt-sm-3">jrd009</p>
+        </div>
+        <div class="d-flex align-items-center">
+          <p class="fw-bold m-4 pt-3">2 Adult</p>
+        </div>
+        <div class="d-flex align-items-center pt-sm-3">
+          <a href="./booked-flights.html">
+            <button id="detailsbtn" class="btn btn-primary">Details</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- section3 -->
+
+  <div id="section3" class="my-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-8 d-flex align-items-center justify-content-center text-center">
+                <h4 class="me-3">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut aliquam leo. Duis varius viverra faucibus. Pellentesque porta at lorem sit amet porttitor. Curabitur est nulla, eleifend ac placerat at, bibendum eget nisl. Nam eget aliquam felis. Suspendisse potenti. Etiam at sodales nisi.
+                </h4>
+            </div>
+            <div class="col-12 col-md-4 d-flex justify-content-center">
+              <img id="people" src="../images/pngwing.com (5) 7.png" alt="Image" class="img-fluid" />
+            </div> 
+        </div>
+    </div>
+</div>
+
+  <!-- FOOTER -->
+  <footer class="text-white d-flex px-md-5 px-3 p-4">
+    <div class="col-md-5 col-12">
+      <p class="fw-bold fs-5">Contact Us</p>
+      <p>We'd  love to hear from you! Whether you have a question, need assistance, or want to share your travel experiences, feel free to reach out to us:</p>
+      <ul>
+        <li>Email: support@nobleskyexpress.com</li>
+        <li>Phone: +639-497-1233-456</li>
+        <li>Address: 123 Travel Ave., Quezon City, Philippines</li>
+        <li>Social Media: Follow us on Facebook, Twitter, and Instagram for the latest updates and travel tips.</li>
+      </ul>
+    </div>
+  </footer>
+  <!-- FOOTER -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/f77fb5b473.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/flight-search.css">
+    <title>Search Flight</title>
+    <style>
+        .progress-card {
+            padding: 10px;
+            margin-top: 10px;
+            min-height: 50px;
+            border: 1px solid #003355;
+            border-radius: 10px;
+        }
+        .circle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            border: 2px solid #235477;
+            color: #235477;
+        }
+        .bar {
+            width: 130px;
+            border: 1px solid #d9d9d9;
+        }
+        .current,
+        .bar-current {
+            border: 3px solid #ffad4c;
+        }
+        .done {
+            border: 3px solid #65ff4c;
+        }
+        .fn{
+            font-weight: 600;
+            color:#235477;
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg px-sm-5 px-3 fixed-top navbar-dark" id="navbar">
+        <img src="../images/noblesky-logo.png" class="logo d-none d-md-block mx-3" alt="noblesky-logo">
+        <a class="navbar-brand fw-bold text-white" href="../index.html">NobleSky Express</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarnav" aria-controls="navbarnav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarnav">
+            <ul class="navbar-nav ms-sm-auto fw-normal">
+                <li class="nav-item mx-3">
+                    <a class="nav-link text-white" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item mx-3">
+                    <a class="nav-link text-white" href="./about.html">About</a>
+                </li>
+                <li class="nav-item mx-3">
+                    <a class="nav-link text-white" href="./login.html">Manage</a>
+                </li>
+                <li class="nav-item mx-3">
+                    <a class="nav-link text-white" href="./login.html"><i class="fa-solid fa-user px-2"></i>Log in</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- NAVBAR END -->
+
+    <div class="container p-4">
+        <!-- SPACE FOR THE NAV BAR SINCE ITS STICKY -->
+    </div>
+<!-- PROGRESS BAR START -->
+    <section class="progress-card align-items-center container mt-5">
+        <div class="row d-flex flex-nowrap">
+            <div class="flex-fill align-items-center d-md-flex justify-content-evenly ">
+                <div class="circle current"><i class="fa-solid fa-plane-up"></i></div>
+                <span class="fn ps-md-3 ps-md0-0">Flight Details</span>
+                <div class="bar rounded-2 d-lg-block d-none"></div>
+            </div>
+                <div class="flex-fill align-items-center d-md-flex justify-content-evenly">
+                <div class="circle"><i class="fa-solid fa-users-between-lines"></i></div>
+                <span class="fn ps-md-3 ps-sm-0">Passenger Details</span>
+                <div class="bar rounded-2 d-lg-block d-none"></div>
+            </div>
+                <div class="flex-fill align-items-center d-md-flex justify-content-evenly">
+                <div class="circle"><i class="fa-solid fa-credit-card"></i></div>
+                <span class="fn ps-md-3 ps-sm-0">Payment</span>
+                <div class="bar rounded-2 d-lg-block d-none"></div>
+            </div>
+                <div class="flex-fill align-items-center d-md-flex justify-content-evenly w-50">
+                <div class="circle"><i class="fa-solid fa-check"></i></div>
+                <span class="fn rounded-2 ps-md-3 ps-md-0">Confrimation</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROGRESS BAR END -->
+
+
+    <!-- MAIN -->
+    <main class="container my-5">
+
+        
+
+        <div class="container flight-search">
+            <h2 class=""><i class="fa-solid fa-plane-up"></i> Flight Search</h2>
+            <div class="row card shadow p-1">
+                <div class="well well-sm">
+                    <div class="row">
+                        <div class="d-md-flex col-xs-12 col-md-6 justify-content-md-end text-sm-end pt-1 pb-1">
+                            <select class="form-select py-0" id="flightType" aria-label="Floating label select example">
+                                <option selected value="one-way" class="">One way</option>
+                                <option value="round-trip">Round trip</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-md-6 px-auto">
+                                            <div class="my-md-2">
+                                                <label for="exampleFormControlInput1" class="form-label m-0">From</label>
+                                                <input type="email" class="form-control py-1" id="exampleFormControlInput1" placeholder="name@example.com">
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-md-6 px-auto">
+                                            <div class="my-md-2">
+                                                <label for="exampleFormControlInput1" class="form-label m-0">To</label>
+                                                <input type="email" class="form-control py-1" id="exampleFormControlInput1" placeholder="name@example.com">
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-md-6 px-auto mt-sm-4 mt-md-0">
+                                            <!-- <hr class="sm-show"> -->
+                                            <div class="mb-md-4 mt-md-2">
+                                                <label for="exampleFormControlInput1" class="form-label m-0">Depart</label>
+                                                <input type="email" class="form-control py-1" id="exampleFormControlInput1" placeholder="name@example.com">
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-md-6 px-auto">
+                                            <div class="mb-md-4 mt-md-2">
+                                                <label for="exampleFormControlInput1" class="form-label m-0">Return</label>
+                                                <input type="email" class="form-control py-1" id="exampleFormControlInput1" placeholder="name@example.com">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-md-6 px-auto mt-sm-4 mt-md-0">
+                                            <!-- <hr class="sm-show"> -->
+                                            <div class="my-md-2">
+                                                <label for="selectCabinClass" class="form-label m-0">Cabin Class</label>
+                                                <select class="form-select py-1" id="selectCabinClass" aria-label="Floating label select example">
+                                                    <option selected value="economy">Economy</option>
+                                                    <option value="business">Business</option>
+                                                    <option value="premium">Business Premium</option>
+                                                    <option value="first-class">First Class</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12 col-md-6 px-auto">
+                                            <div class="mb-md-4 mt-md-2">
+                                                <label for="selectPassengers" class="form-label m-0">Passengers</label>
+                                                <select class="form-select py-1" id="selectPassengers" aria-label="Floating label select example">
+                                                    <option selected value="adult">Adult</option>
+                                                    <option value="children">Children</option>
+                                                    <option value="infant">Infant</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 d-flex justify-content-center align-items-center p-4">
+                                            <button type="button" class="btn" id="btnSearchFlight">Search Flight</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- DEPARTING FLIGHT -->
+        <section>
+            <hr class="mt-5">
+            <h5>SELECT YOUR DEPARTING FLIGHT</h5>
+            <div class="row text-start my-3">
+                <h3 class="col-lg-3">PHILIPPINES</h3>
+                <h3 class="fa-solid fa-plane col-lg-1"></h3>
+                <h3 class="col-lg-2">JAPAN</h3>
+            </div>
+
+            <div id="carouselExampleInterval1" class="carousel container" data-bs-touch="false" data-bs-interval="false">
+
+                <div class="inner carousel-inner">
+                    <!-- <div class="carousel-item active">
+                        <div class="week">
+                        </div>
+                    </div> -->
+                    <div class="carousel-item active mx-0">
+                        <div class="week d-flex">
+                            <div class="radio-item flex-fill">
+                                <input name="d-radio" id="dradio1" type="radio">
+                                <label for="dradio1">
+                                    <div>
+                                        <p class="m-0 text-center">Sun, 24 Aug</p>
+                                        <p class="m-0 text-center">PHP 15,000</p>
+                                    </div>
+                                </label>
+                                
+                            </div>
+                            <div class="radio-item flex-fill">
+                                <input name="d-radio" id="dradio2" type="radio">
+                                <label for="dradio2">
+                                    <div>
+                                        <p class="m-0 text-center">Mon, 25 Aug</p>
+                                        <p class="m-0 text-center">PHP 15,000</p>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="radio-item flex-fill">
+                                <input name="d-radio" id="dradio3" type="radio">
+                                <label for="dradio3">
+                                    <div>
+                                        <p class="m-0 text-center">Tue, 26 Aug</p>
+                                        <p class="m-0 text-center">PHP 15,000</p>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="radio-item flex-fill">
+                                <input name="d-radio" id="dradio4" type="radio">
+                                <label for="dradio4">
+                                    <div>
+                                        <p class="m-0 text-center">Wed, 27 Aug</p>
+                                        <p class="m-0 text-center">PHP 15,000</p>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="radio-item flex-fill">
+                                <input name="d-radio" id="dradio5" type="radio">
+                                <label for="dradio5">
+                                    <div>
+                                        <p class="m-0 text-center">Thu, 28 Aug</p>
+                                        <p class="m-0 text-center">PHP 15,000</p>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="radio-item flex-fill">
+                                <input name="d-radio" id="dradio6" type="radio">
+                                <label for="dradio6">
+                                    <div>
+                                        <p class="m-0 text-center">Fri, 29 Aug</p>
+                                        <p class="m-0 text-center">PHP 15,000</p>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="radio-item flex-fill">
+                                <input name="d-radio" id="dradio7" type="radio">
+                                <label for="dradio7">
+                                    <div>
+                                        <p class="m-0 text-center">Sat, 30 Aug</p>
+                                        <p class="m-0 text-center">PHP 15,000</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="week d-flex">
+                            <div class="radio-item flex-fill">
+                                <input name="d-radio" id="dradio8" type="radio">
+                                <label for="dradio8">
+                                    <div>
+                                        <p class="m-0 text-center">Sun, 31 Aug</p>
+                                        <p class="m-0 text-center">PHP 15,000</p>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="radio-item flex-fill">
+                                <input name="d-radio" id="dradio9" type="radio">
+                                <label for="dradio9">
+                                    <div>
+                                        <p class="m-0 text-center">Mon, 01 Sep</p>
+                                        <p class="m-0 text-center">PHP 15,000</p>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="radio-item flex-fill">
+                                <input name="d-radio" id="dradio10" type="radio">
+                                <label for="dradio10">
+                                    <div>
+                                        <p class="m-0 text-center">Tue, 02 Sep</p>
+                                        <p class="m-0 text-center">PHP 15,000</p>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="radio-item flex-fill">
+                                <input name="d-radio" id="dradio11" type="radio">
+                                <label for="dradio11">
+                                    <div>
+                                        <p class="m-0 text-center">Wed, 03 Sep</p>
+                                        <p class="m-0 text-center">PHP 15,000</p>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="radio-item flex-fill">
+                                <input name="d-radio" id="dradio12" type="radio">
+                                <label for="dradio12">
+                                    <div>
+                                        <p class="m-0 text-center">Thu, 04 Sep</p>
+                                        <p class="m-0 text-center">PHP 15,000</p>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="radio-item flex-fill">
+                                <input name="d-radio" id="dradio13" type="radio">
+                                <label for="dradio13">
+                                    <div>
+                                        <p class="m-0 text-center">Fri, 05 Sep</p>
+                                        <p class="m-0 text-center">PHP 15,000</p>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="radio-item flex-fill">
+                                <input name="d-radio" id="dradio14" type="radio">
+                                <label for="dradio14">
+                                    <div>
+                                        <p class="m-0 text-center">Sat, 06 Sep</p>
+                                        <p class="m-0 text-center">PHP 15,000</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="button rounded-start rounded-0 carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval1" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="button rounded-end rounded-0 carousel-control-next" type="button" data-bs-target="#carouselExampleInterval1" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <div id="AvailableFlights" class="row m-3 shadow border rounded-3 fw-normal">
+                <div class=" row  pb-0 px-4  text-center justify-content-between">
+                    
+                    <div class="col-12 col-lg-2 col-md-4 my-auto">
+                        <div class="row  py-2">
+                            <div class="col ">
+                                <p class="pt-3 m-0" >7:45 pm</p>
+                                <div class="row ">
+                                    <div class="col text-end p-1">MNL</div>
+                                    <div class="fa-sharp fa-solid fa-plane-departure col text-start p-1"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-12 col-lg-2 col-md-4 my-auto">
+                        <div class="row pt-4 mb-0 text-center ">
+                            <hr class="col m-0 d-none d-md-block" style="border: 5px dashed red "></hr>
+                            <i class="fa-sharp fa-solid fa-plane col p-0"></i>
+                            <hr class="col d-none d-md-block" style="border: 5px dashed red"></hr>
+                            <div class="fa-solid fa-chevron-right col text-start d-none d-md-block"></div>
+                        </div>
+                        <div class=" row text-center pe-4">
+                            <p>8hrs</p>
+                        </div>
+                    </div>
+    
+                    <div class="col-12 col-lg-2 col-md-4 my-auto">
+                        <div class="row  py-2">
+                            <div class="col ">
+                                <p class=" m-0" >8:45 pm</p>
+                                <div class="row ">
+                                    <div class="col text-end p-1">TKY</div>
+                                    <div class="fa-sharp fa-solid fa-plane-arrival col text-start p-1"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class=" col-12 col-lg-2 col-md-4 my-auto">
+                        <div class="row">
+                            <div class="fa-sharp fa-solid fa-plane-up col my-auto text-end px-1"></div>
+                            <p class="col my-auto text-start px-1">jrd009</p>
+                        </div>
+                    </div>
+                    
+    
+                    <div class="col-12 col-lg-2 col-md-4 my-auto  price">
+                        <p class="text-center m-0">All in Fare / Guest</p>
+                        <p class="text-center m-0">PHP 11, 000</p>
+                    </div>
+    
+                    <div class="col-12 col-lg-2 col-md-4 my-auto ">
+                        <a href="#"><button class="px-5 py-1 rounded bg-light">Select</button></a>
+                    </div>
+        
+                    
+                </div>
+            </div>
+            <div id="AvailableFlights" class="row m-3 shadow border rounded-3 fw-normal">
+                <div class=" row  pb-0 px-4  text-center justify-content-between">
+                    
+                    <div class="col-12 col-lg-2 col-md-4 my-auto">
+                        <div class="row  py-2">
+                            <div class="col ">
+                                <p class="pt-3 m-0" >7:45 pm</p>
+                                <div class="row ">
+                                    <div class="col text-end p-1">MNL</div>
+                                    <div class="fa-sharp fa-solid fa-plane-departure col text-start p-1"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-12 col-lg-2 col-md-4 my-auto">
+                        <div class="row pt-4 mb-0 text-center ">
+                            <hr class="col m-0 d-none d-md-block" style="border: 5px dashed red "></hr>
+                            <i class="fa-sharp fa-solid fa-plane col p-0"></i>
+                            <hr class="col d-none d-md-block" style="border: 5px dashed red"></hr>
+                            <div class="fa-solid fa-chevron-right col text-start d-none d-md-block"></div>
+                        </div>
+                        <div class=" row text-center pe-4">
+                            <p>8hrs</p>
+                        </div>
+                    </div>
+    
+                    <div class="col-12 col-lg-2 col-md-4 my-auto">
+                        <div class="row  py-2">
+                            <div class="col ">
+                                <p class=" m-0" >8:45 pm</p>
+                                <div class="row ">
+                                    <div class="col text-end p-1">TKY</div>
+                                    <div class="fa-sharp fa-solid fa-plane-arrival col text-start p-1"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class=" col-12 col-lg-2 col-md-4 my-auto">
+                        <div class="row">
+                            <div class="fa-sharp fa-solid fa-plane-up col my-auto text-end px-1"></div>
+                            <p class="col my-auto text-start px-1">jrd009</p>
+                        </div>
+                    </div>
+                    
+    
+                    <div class="col-12 col-lg-2 col-md-4 my-auto  price">
+                        <p class="text-center m-0">All in Fare / Guest</p>
+                        <p class="text-center m-0">PHP 11, 000</p>
+                    </div>
+    
+                    <div class="col-12 col-lg-2 col-md-4 my-auto ">
+                        <a href="#"><button class="px-5 py-1 rounded bg-light">Select</button></a>
+                    </div>
+        
+                    
+                </div>
+            </div>
+            
+        </section>
+          <!-- RETURNING FLIGHT -->
+        <section>
+            <hr class="mt-5">
+            <h5>SELECT YOUR DEPARTING FLIGHT</h5>
+            <div class="row text-start my-3">
+                <h3 class="col-lg-2">JAPAN</h3>
+                <h3 class="fa-solid fa-plane col-lg-1"></h3>
+                <h3 class="col-lg-3">PHILIPPINES</h3>
+                
+                
+            </div>
+
+            <div id="carouselExampleInterval" class="carousel container" data-bs-touch="false" data-bs-interval="false">
+
+                <div class="inner carousel-inner">
+                    <!-- <div class="carousel-item active">
+                        <div class="week">
+                        </div>
+                    </div> -->
+                    <div class="carousel-item active mx-0">
+                        <div class="week d-flex">
+                            <div class="radio-item flex-fill">
+                                <input name="d-radio" id="dradio1" type="radio">
+                                <label for="dradio1">
+                                    <div>
+                                        <p class="m-0 text-center">Sun, 24 Aug</p>
+                                        <p class="m-0 text-center">PHP 15,000</p>
+                                    </div>
+                                </label>
+                                
+                            </div>
+                            <div class="radio-item flex-fill">
+                                <input name="d-radio" id="dradio2" type="radio">
+                                <label for="dradio2">
+                                    <div>
+                                        <p class="m-0 text-center">Mon, 25 Aug</p>
+                                        <p class="m-0 text-center">PHP 15,000</p>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="radio-item flex-fill">
+                                <input name="d-radio" id="dradio3" type="radio">
+                                <label for="dradio3">
+                                    <div>
+                                        <p class="m-0 text-center">Tue, 26 Aug</p>
+                                        <p class="m-0 text-center">PHP 15,000</p>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="radio-item flex-fill">
+                                <input name="d-radio" id="dradio4" type="radio">
+                                <label for="dradio4">
+                                    <div>
+                                        <p class="m-0 text-center">Wed, 27 Aug</p>
+                                        <p class="m-0 text-center">PHP 15,000</p>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="radio-item flex-fill">
+                                <input name="d-radio" id="dradio5" type="radio">
+                                <label for="dradio5">
+                                    <div>
+                                        <p class="m-0 text-center">Thu, 28 Aug</p>
+                                        <p class="m-0 text-center">PHP 15,000</p>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="radio-item flex-fill">
+                                <input name="d-radio" id="dradio6" type="radio">
+                                <label for="dradio6">
+                                    <div>
+                                        <p class="m-0 text-center">Fri, 29 Aug</p>
+                                        <p class="m-0 text-center">PHP 15,000</p>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="radio-item flex-fill">
+                                <input name="d-radio" id="dradio7" type="radio">
+                                <label for="dradio7">
+                                    <div>
+                                        <p class="m-0 text-center">Sat, 30 Aug</p>
+                                        <p class="m-0 text-center">PHP 15,000</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="week d-flex">
+                            <div class="radio-item flex-fill">
+                                <input name="d-radio" id="dradio8" type="radio">
+                                <label for="dradio8">
+                                    <div>
+                                        <p class="m-0 text-center">Sun, 31 Aug</p>
+                                        <p class="m-0 text-center">PHP 15,000</p>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="radio-item flex-fill">
+                                <input name="d-radio" id="dradio9" type="radio">
+                                <label for="dradio9">
+                                    <div>
+                                        <p class="m-0 text-center">Mon, 01 Sep</p>
+                                        <p class="m-0 text-center">PHP 15,000</p>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="radio-item flex-fill">
+                                <input name="d-radio" id="dradio10" type="radio">
+                                <label for="dradio10">
+                                    <div>
+                                        <p class="m-0 text-center">Tue, 02 Sep</p>
+                                        <p class="m-0 text-center">PHP 15,000</p>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="radio-item flex-fill">
+                                <input name="d-radio" id="dradio11" type="radio">
+                                <label for="dradio11">
+                                    <div>
+                                        <p class="m-0 text-center">Wed, 03 Sep</p>
+                                        <p class="m-0 text-center">PHP 15,000</p>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="radio-item flex-fill">
+                                <input name="d-radio" id="dradio12" type="radio">
+                                <label for="dradio12">
+                                    <div>
+                                        <p class="m-0 text-center">Thu, 04 Sep</p>
+                                        <p class="m-0 text-center">PHP 15,000</p>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="radio-item flex-fill">
+                                <input name="d-radio" id="dradio13" type="radio">
+                                <label for="dradio13">
+                                    <div>
+                                        <p class="m-0 text-center">Fri, 05 Sep</p>
+                                        <p class="m-0 text-center">PHP 15,000</p>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="radio-item flex-fill">
+                                <input name="d-radio" id="dradio14" type="radio">
+                                <label for="dradio14">
+                                    <div>
+                                        <p class="m-0 text-center">Sat, 06 Sep</p>
+                                        <p class="m-0 text-center">PHP 15,000</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="button rounded-start rounded-0 carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="button rounded-end rounded-0 carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <div id="AvailableFlights" class="row m-3 shadow border rounded-3 fw-normal">
+                <div class=" row  pb-0 px-4  text-center justify-content-between">
+                    
+                    <div class="col-12 col-lg-2 col-md-4 my-auto">
+                        <div class="row  py-2">
+                            <div class="col ">
+                                <p class="pt-3 m-0" >7:45 pm</p>
+                                <div class="row ">
+                                    <div class="col text-end p-1">MNL</div>
+                                    <div class="fa-sharp fa-solid fa-plane-departure col text-start p-1"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-12 col-lg-2 col-md-4 my-auto">
+                        <div class="row pt-4 mb-0 text-center ">
+                            <hr class="col m-0 d-none d-md-block" style="border: 5px dashed red "></hr>
+                            <i class="fa-sharp fa-solid fa-plane col p-0"></i>
+                            <hr class="col d-none d-md-block" style="border: 5px dashed red"></hr>
+                            <div class="fa-solid fa-chevron-right col text-start d-none d-md-block"></div>
+                        </div>
+                        <div class=" row text-center pe-4">
+                            <p>8hrs</p>
+                        </div>
+                    </div>
+    
+                    <div class="col-12 col-lg-2 col-md-4 my-auto">
+                        <div class="row  py-2">
+                            <div class="col ">
+                                <p class=" m-0" >8:45 pm</p>
+                                <div class="row ">
+                                    <div class="col text-end p-1">TKY</div>
+                                    <div class="fa-sharp fa-solid fa-plane-arrival col text-start p-1"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class=" col-12 col-lg-2 col-md-4 my-auto">
+                        <div class="row">
+                            <div class="fa-sharp fa-solid fa-plane-up col my-auto text-end px-1"></div>
+                            <p class="col my-auto text-start px-1">jrd009</p>
+                        </div>
+                    </div>
+                    
+    
+                    <div class="col-12 col-lg-2 col-md-4 my-auto  price">
+                        <p class="text-center m-0">All in Fare / Guest</p>
+                        <p class="text-center m-0">PHP 11, 000</p>
+                    </div>
+    
+                    <div class="col-12 col-lg-2 col-md-4 my-auto ">
+                        <a href="#"><button class="px-5 py-1 rounded bg-light">Select</button></a>
+                    </div>
+        
+                    
+                </div>
+            </div>
+            <div id="AvailableFlights" class="row m-3 shadow border rounded-3 fw-normal">
+                <div class=" row  pb-0 px-4  text-center justify-content-between">
+                    
+                    <div class="col-12 col-lg-2 col-md-4 my-auto">
+                        <div class="row  py-2">
+                            <div class="col ">
+                                <p class="pt-3 m-0" >7:45 pm</p>
+                                <div class="row ">
+                                    <div class="col text-end p-1">MNL</div>
+                                    <div class="fa-sharp fa-solid fa-plane-departure col text-start p-1"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-12 col-lg-2 col-md-4 my-auto">
+                        <div class="row pt-4 mb-0 text-center ">
+                            <hr class="col m-0 d-none d-md-block" style="border: 5px dashed red "></hr>
+                            <i class="fa-sharp fa-solid fa-plane col p-0"></i>
+                            <hr class="col d-none d-md-block" style="border: 5px dashed red"></hr>
+                            <div class="fa-solid fa-chevron-right col text-start d-none d-md-block"></div>
+                        </div>
+                        <div class=" row text-center pe-4">
+                            <p>8hrs</p>
+                        </div>
+                    </div>
+    
+                    <div class="col-12 col-lg-2 col-md-4 my-auto">
+                        <div class="row  py-2">
+                            <div class="col ">
+                                <p class=" m-0" >8:45 pm</p>
+                                <div class="row ">
+                                    <div class="col text-end p-1">TKY</div>
+                                    <div class="fa-sharp fa-solid fa-plane-arrival col text-start p-1"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class=" col-12 col-lg-2 col-md-4 my-auto">
+                        <div class="row">
+                            <div class="fa-sharp fa-solid fa-plane-up col my-auto text-end px-1"></div>
+                            <p class="col my-auto text-start px-1">jrd009</p>
+                        </div>
+                    </div>
+                    
+    
+                    <div class="col-12 col-lg-2 col-md-4 my-auto  price">
+                        <p class="text-center m-0">All in Fare / Guest</p>
+                        <p class="text-center m-0">PHP 11, 000</p>
+                    </div>
+    
+                    <div class="col-12 col-lg-2 col-md-4 my-auto ">
+                        <a href="#"><button class="px-5 py-1 rounded bg-light">Select</button></a>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </section>
+        <div class="col-md-12 d-flex justify-content-end align-items-center p-4">
+            <a href="./passenger-details.html">
+            <button type="button" class="btn" id="btnSearchFlight">Save and Continue</button>
+            </a>
+        </div>
+    </main>
+    <!-- MAIN END -->
+    <!-- FOOTER -->
+    <footer class="text-white d-flex px-md-5 px-3 p-4">
+        <div class="col-md-5 col-12">
+            <p class="fw-bold fs-5">Contact Us</p>
+            <p>We'd  love to hear from you! Whether you have a question, need assistance, or want to share your travel experiences, feel free to reach out to us:</p>
+            <ul>
+                <li>Email: support@nobleskyexpress.com</li>
+                <li>Phone: +639-497-1233-456</li>
+                <li>Address: 123 Travel Ave., Quezon City, Philippines</li>
+                <li>Social Media: Follow us on Facebook, Twitter, and Instagram for the latest updates and travel tips.</li>
+            </ul>
+        </div>
+    </footer>
+    <!-- FOOTER -->
+
+    <script src="https://kit.fontawesome.com/f77fb5b473.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
